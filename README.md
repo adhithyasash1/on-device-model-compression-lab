@@ -120,14 +120,6 @@ data/         Ignored local datasets and manifests.
 - Core ML compile and model loading are outside timed latency samples.
 - The recovery configs are experimental and are not part of the decision table yet.
 
-## Next Steps
-
-- Add a full ImageNet-1k validation mode with explicit dataset-root configuration.
-- Add repeated-run aggregation with confidence intervals for latency and accuracy deltas.
-- Add an iPhone benchmark harness before making device claims.
-- Add fine-tuning or structured recovery for sparse pruning.
-- Add report validation that fails if committed benchmark tables diverge from run summaries.
-
 ## Sources
 
 - [`reports/real_benchmark_table.csv`](reports/real_benchmark_table.csv)
