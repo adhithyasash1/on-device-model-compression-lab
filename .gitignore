@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+htmlcov/
+.DS_Store
+
+# Generated benchmark state.
+/runs/
+/reports/scoreboard.csv
+/reports/scoreboard.md
+
+# Build outputs and local packaging metadata.
+/build/
+/dist/
+*.egg-info/
+
+# Local ML artifacts and datasets.
+/data/
+/models/
+*.ckpt
+*.safetensors
+*.bin
+*.mlpackage/
+*.mlpackage
+*.mlmodelc/
+*.mlmodelc
+*.mlmodel
+*.pt
+*.pth
+*.onnx
+*.tflite

@@ -1,0 +1,39 @@
+schema_version: 1
+name: mobilevit-small-pruned-sparse-50-eval500
+execution:
+  mode: real
+  strict_scoreboard: true
+model:
+  id: apple/mobilevit-small
+  revision: null
+  input_size: 256
+  num_labels: 1000
+dataset:
+  name: imagenette
+  split: eval500
+  seed: 1337
+  root: data/imagenette2-160/val
+  manifest_path: null
+  limit: 500
+export:
+  format: coreml
+  input_type: tensor
+  deployment_target: macOS15
+  precision: fp16
+  convert_to: mlprogram
+compression:
+  name: pruned-sparse-50
+  kind: pruned_sparse
+  bits: null
+  mode: null
+  target_sparsity: 0.5
+benchmark:
+  batch_size: 1
+  warmup: 10
+  iterations: 100
+  compute_units:
+    - CPU_ONLY
+    - CPU_AND_GPU
+    - ALL
+output_dir: runs
+reports_dir: reports

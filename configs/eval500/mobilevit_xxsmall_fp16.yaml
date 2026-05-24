@@ -1,0 +1,40 @@
+schema_version: 1
+name: mobilevit-xxsmall-fp16-eval500
+execution:
+  mode: real
+  strict_scoreboard: true
+model:
+  id: apple/mobilevit-xx-small
+  revision: null
+  input_size: 256
+  num_labels: 1000
+dataset:
+  name: imagenette
+  split: eval500
+  seed: 1337
+  root: data/imagenette2-160/val
+  manifest_path: null
+  limit: 500
+export:
+  format: coreml
+  input_type: tensor
+  deployment_target: macOS15
+  precision: fp16
+  convert_to: mlprogram
+compression:
+  name: fp16
+  kind: fp16
+  bits: null
+  mode: null
+  target_sparsity: null
+benchmark:
+  batch_size: 1
+  warmup: 10
+  iterations: 100
+  compute_units:
+    - CPU_ONLY
+    - CPU_AND_GPU
+    - ALL
+output_dir: runs
+reports_dir: reports
+

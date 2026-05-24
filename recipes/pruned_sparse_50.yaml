@@ -1,0 +1,6 @@
+name: pruned-sparse-50
+kind: pruned_sparse
+bits: null
+mode: null
+target_sparsity: 0.5
+

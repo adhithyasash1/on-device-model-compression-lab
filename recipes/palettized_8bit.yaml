@@ -1,0 +1,6 @@
+name: palettized-8bit
+kind: palettized
+bits: 8
+mode: kmeans
+target_sparsity: null
+

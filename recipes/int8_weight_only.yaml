@@ -1,0 +1,6 @@
+name: int8-weight-only
+kind: int8_weight_only
+bits: 8
+mode: linear_symmetric
+target_sparsity: null
+

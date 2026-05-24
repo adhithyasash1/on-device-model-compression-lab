@@ -1,0 +1,46 @@
+schema_version: 1
+name: mobilevit-xxsmall-int8-calib512-bias-eval500
+execution:
+  mode: real
+  strict_scoreboard: true
+model:
+  id: apple/mobilevit-xx-small
+  revision: null
+  input_size: 256
+  num_labels: 1000
+dataset:
+  name: imagenette
+  split: eval500
+  seed: 1337
+  root: data/imagenette2-160/val
+  manifest_path: null
+  limit: 500
+export:
+  format: coreml
+  input_type: tensor
+  deployment_target: macOS15
+  precision: fp16
+  convert_to: mlprogram
+compression:
+  name: int8-weight-only-calib512
+  kind: int8_weight_only
+  bits: 8
+  mode: linear_symmetric
+  target_sparsity: null
+  calibration_samples: 512
+  calibration_seed: 7331
+  calibration_op_group_size: -1
+recovery:
+  logit_repair: class_bias
+  calibration_samples: 512
+  calibration_seed: 7332
+benchmark:
+  batch_size: 1
+  warmup: 10
+  iterations: 100
+  compute_units:
+    - CPU_ONLY
+    - CPU_AND_GPU
+    - ALL
+output_dir: runs
+reports_dir: reports

@@ -1,0 +1,39 @@
+schema_version: 1
+name: synthetic-fp16-smoke
+execution:
+  mode: synthetic
+  strict_scoreboard: true
+model:
+  id: synthetic/mobilevit-xx-small
+  revision: null
+  input_size: 256
+  num_labels: 1000
+dataset:
+  name: synthetic
+  split: eval20
+  seed: 1337
+  root: null
+  manifest_path: null
+  limit: 20
+export:
+  format: coreml
+  input_type: tensor
+  deployment_target: macOS15
+  precision: fp16
+  convert_to: mlprogram
+compression:
+  name: fp16
+  kind: fp16
+  bits: null
+  mode: null
+  target_sparsity: null
+benchmark:
+  batch_size: 1
+  warmup: 2
+  iterations: 10
+  compute_units:
+    - CPU_ONLY
+    - ALL
+output_dir: runs
+reports_dir: reports
+

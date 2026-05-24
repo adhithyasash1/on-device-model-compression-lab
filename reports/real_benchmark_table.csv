@@ -1,0 +1,21 @@
+status,model_id,recipe,split,samples,size_mb,top1,top5,top5_agreement,best_median_ms,best_compute_unit,rss_delta_mb,rss_after_benchmark_mb,tradeoff,failure_stage,failure_summary,run_id
+ok,apple/mobilevit-xx-small,fp16,eval20,20,2.8852,0.7,0.95,0.75,1.0935,ALL,374.8987,590.2664,baseline,,,20260524_101351_mobilevit-xx-small_fp16
+ok,apple/mobilevit-xx-small,int8-weight-only,eval20,20,1.5172,0.75,0.95,0.2,1.0734,ALL,309.1825,524.9761,"size -47.4%, top1 +0.050, median -0.020 ms",,,20260524_101405_mobilevit-xx-small_int8-weight-only
+ok,apple/mobilevit-xx-small,palettized-8bit,eval20,20,1.5387,0.75,0.95,0.35,1.0793,ALL,401.8668,617.1853,"size -46.7%, top1 +0.050, median -0.014 ms",,,20260524_101424_mobilevit-xx-small_palettized-8bit
+ok,apple/mobilevit-xx-small,palettized-6bit,eval20,20,1.1991,0.35,0.65,0.0,1.0793,ALL,401.3752,616.7593,"size -58.4%, top1 -0.350, median -0.014 ms",,,20260524_101453_mobilevit-xx-small_palettized-6bit
+ok,apple/mobilevit-xx-small,pruned-sparse-50,eval20,20,1.6568,0.0,0.0,0.0,1.0893,ALL,365.5762,580.9603,accuracy collapse,,,20260524_101515_mobilevit-xx-small_pruned-sparse-50
+ok,apple/mobilevit-xx-small,fp16,eval500,500,2.8852,0.6,0.864,0.834,1.0771,ALL,654.8849,870.2525,baseline,,,20260524_101806_mobilevit-xx-small_fp16
+ok,apple/mobilevit-xx-small,int8-weight-only,eval500,500,1.5172,0.592,0.858,0.23,1.1158,ALL,750.207,965.5419,"size -47.4%, top1 -0.008, median +0.039 ms",,,20260524_101830_mobilevit-xx-small_int8-weight-only
+ok,apple/mobilevit-xx-small,palettized-8bit,eval500,500,1.5387,0.598,0.86,0.262,1.077,ALL,819.1836,1034.5841,"size -46.7%, top1 -0.002, median -0.000 ms",,,20260524_101858_mobilevit-xx-small_palettized-8bit
+ok,apple/mobilevit-xx-small,palettized-6bit,eval500,500,1.1991,0.374,0.618,0.002,1.0821,ALL,629.1948,844.4969,"size -58.4%, top1 -0.226, median +0.005 ms",,,20260524_101937_mobilevit-xx-small_palettized-6bit
+ok,apple/mobilevit-xx-small,pruned-sparse-50,eval500,500,1.6568,0.0,0.0,0.0,1.073,ALL,783.2371,998.5393,accuracy collapse,,,20260524_102009_mobilevit-xx-small_pruned-sparse-50
+ok,apple/mobilevit-small,fp16,eval20,20,11.4904,0.7,0.95,0.9,1.8222,ALL,479.9201,695.1567,baseline,,,20260524_101534_mobilevit-small_fp16
+ok,apple/mobilevit-small,int8-weight-only,eval20,20,5.8558,0.7,0.95,0.55,1.8308,ALL,502.5956,717.8486,"size -49.0%, top1 +0.000, median +0.009 ms",,,20260524_101550_mobilevit-small_int8-weight-only
+ok,apple/mobilevit-small,palettized-8bit,eval20,20,5.8594,0.7,0.95,0.45,1.8133,ALL,154.2881,369.5739,"size -49.0%, top1 +0.000, median -0.009 ms",,,20260524_101611_mobilevit-small_palettized-8bit
+ok,apple/mobilevit-small,palettized-6bit,eval20,20,4.4418,0.65,0.95,0.1,1.8111,ALL,387.8257,603.521,"size -61.3%, top1 -0.050, median -0.011 ms",,,20260524_101713_mobilevit-small_palettized-6bit
+ok,apple/mobilevit-small,pruned-sparse-50,eval20,20,6.5077,0.0,0.0,0.0,1.7913,ALL,244.7278,459.9644,accuracy collapse,,,20260524_101745_mobilevit-small_pruned-sparse-50
+ok,apple/mobilevit-small,fp16,eval500,500,11.4904,0.728,0.954,0.88,1.8174,ALL,863.6006,1078.9519,baseline,,,20260524_102036_mobilevit-small_fp16
+ok,apple/mobilevit-small,int8-weight-only,eval500,500,5.8558,0.74,0.954,0.514,1.81,ALL,896.6636,1112.2115,"size -49.0%, top1 +0.012, median -0.007 ms",,,20260524_102115_mobilevit-small_int8-weight-only
+ok,apple/mobilevit-small,palettized-8bit,eval500,500,5.8594,0.726,0.946,0.444,1.8471,ALL,486.228,701.612,"size -49.0%, top1 -0.002, median +0.030 ms",,,20260524_102200_mobilevit-small_palettized-8bit
+ok,apple/mobilevit-small,palettized-6bit,eval500,500,4.4418,0.682,0.918,0.094,2.0203,ALL,731.4473,946.7003,"size -61.3%, top1 -0.046, median +0.203 ms",,,20260524_102320_mobilevit-small_palettized-6bit
+ok,apple/mobilevit-small,pruned-sparse-50,eval500,500,6.5077,0.0,0.0,0.0,1.8891,ALL,818.1514,1033.3716,accuracy collapse,,,20260524_102419_mobilevit-small_pruned-sparse-50

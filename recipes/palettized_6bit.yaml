@@ -1,0 +1,6 @@
+name: palettized-6bit
+kind: palettized
+bits: 6
+mode: kmeans
+target_sparsity: null
+
